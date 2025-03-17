@@ -1,5 +1,7 @@
 # DFCI's AOAI Azure App Service, Deploy a Python (Flask) web app to Azure App Service - Sample Application
 
+## This branch adds the RAG functionality using Azure AI Search and Azure Embedding Models. Alternatively, we could use Databricks side counterparts for RAG functionality (I will create a new branch for its implementation).
+
 This is the sample Flask application for the Azure Quickstart [Deploy a Python (Django or Flask) web app to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/quickstart-python). For instructions on how to create the Azure resources and deploy the application to Azure, refer to the Quickstart article.
 
 Sample applications are available for the other frameworks here:
