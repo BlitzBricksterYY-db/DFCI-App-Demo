@@ -1,10 +1,7 @@
-# DFCI's AOAI Azure App Service, Deploy a Python (Flask) web app to Azure App Service - Sample Application
+# DFCI's AOAI Azure App Service behind APIM, Deploy a Python (Flask) web app to Azure App Service, Custom PyFunc Python Model served by Databricks Model Serving
 
-This is the sample Flask application for the Azure Quickstart [Deploy a Python (Django or Flask) web app to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/quickstart-python). For instructions on how to create the Azure resources and deploy the application to Azure, refer to the Quickstart article.
+## Architecture here:
+![Azure and Databricks](DFCI_Demo_App_Architecture.jpeg "Architecture")
 
-Sample applications are available for the other frameworks here:
-
-* Django [https://github.com/Azure-Samples/msdocs-python-django-webapp-quickstart](https://github.com/Azure-Samples/msdocs-python-django-webapp-quickstart)
-* FastAPI [https://github.com/Azure-Samples/msdocs-python-fastapi-webapp-quickstart](https://github.com/Azure-Samples/msdocs-python-fastapi-webapp-quickstart)
-
-If you need an Azure account, you can [create one for free](https://azure.microsoft.com/en-us/free/).
+## Described in words, the architecture is:
+notebook calling (client side) -> Databricks model serving endpoint with AI gateway, serving a custom pyfunc logged model in UC -> model first calling Azure OAuth2.0 server and get authed/issued with a token -> model then calling REST API managed by APIM -> Azure App Service -> AOAI model.
